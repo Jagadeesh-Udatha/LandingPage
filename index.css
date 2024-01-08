@@ -1,0 +1,412 @@
+
+  body {
+    overflow-x: hidden;
+    background-color: #2D3137;
+    background-image: url("pexels-krivec-ales-552784.jpg");
+    background-size: 1600px 2500px;
+    height: 2000px;
+  }
+
+  nav {
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  margin: 10px;
+  padding: 8px 20px;
+  color: white;
+  opacity: 0;
+  animation: drop-down-header 1.5s forwards;
+  animation-delay: 4.5s;
+  
+
+}
+
+header {
+  position: sticky;
+  top:0;
+  z-index: 10px;
+  
+}
+
+.left-header img {
+  height: 50px;
+}
+
+
+.right-header {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  font-size: 19px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop-down {
+  position: absolute;
+}
+
+.drop-down ul {
+  list-style: none;
+  display: none;
+
+  margin-left: -70px;
+  cursor: pointer;
+
+}
+.drop-down ul > li {
+  font-size: 17px;
+  text-align: center;
+  margin-left: -25px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+
+
+.courses:hover .drop-down ul {
+  display: flex;
+  flex-direction: column;
+}
+.drop-down li{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  max-width: 180px;
+  padding: 10px 0 0 0;
+}
+
+.drop-down ul> li:hover {
+  background-color: rgb(77, 122, 156);
+}
+
+.login,
+  .enroll-now {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    background: linear-gradient(to right, #3494e6, #ec6ead);
+    color: #fff;
+  }
+
+  .login:hover,
+  .enroll-now:hover {
+    background: linear-gradient(to right, #a65bb9, #988989);
+    color: #fff;
+  }
+
+  .login:active,
+  .enroll-now:active {
+    background: linear-gradient(to right, #2980b9, #8e44ad);
+  }
+
+  
+  .top-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+    align-items: center;
+    gap: 70px;
+
+  }
+  .letter {
+    font-size: 35px;
+    margin-right: 20px;
+    display: inline-block;
+    opacity: 0;
+    color:black;
+  }
+
+  .letter-1 {
+    color: #C07F00;
+  }
+
+  .all-letters {
+    margin-left: 50px;
+  }
+
+  .tag-line {
+    animation : slideRight 2s forwards;
+    animation-delay: 3.5s;
+    opacity: 0;
+    width: 350px;
+    text-align: center;
+  }
+
+  .tag-line p{
+    font-size: 25px;
+    margin-left: -50px;
+  }
+
+  .carousels-div {
+    display: flex;
+    align-items: center;
+    gap: 430px;
+  }
+  
+
+  .carousel-outer {
+    height: 300px;
+    width: 520px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    background-color: #62859e71;
+    border-radius: 50px;
+    animation: appearInstant 2s forwards;
+    animation-delay: 4.5s;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+  }
+
+  .carousel {
+    display: flex;
+    width: 3570px;
+    padding-top: 35px;
+
+  }
+
+  
+
+  .carousel > div p{
+    width: 500px;
+  }
+
+  
+
+  .div-all img {
+    height: 50px;
+  }
+
+  .div-all p{
+    font-size: 17px;
+    text-align: justify;
+    padding-left: 10px;
+  }
+  
+  .images-para {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+    padding-top: 15px;
+    padding-bottom : 15px;
+    font-size : 25px;
+  }
+
+  .clickable-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 520px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    background-color: #62859e71;
+    border-radius: 50px;
+    animation: appearInstant 2s forwards;
+    animation-delay: 4.5s;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+  }
+  .options-3 {
+    display: flex;
+    gap: 35px;
+    font-size: 25px;
+    transition: border 0.5s ease-in-out; /* Updated transition property */
+  }
+
+  .quality {
+    border-bottom: 2px solid rgb(252, 204, 59);
+  }
+
+  .quality-p, .placements-p, .preparation-p {
+    border-bottom: 2px solid transparent; /* Added border for smooth transition */
+  }
+
+  .quality-p.active, .placements-p.active, .preparation-p.active {
+    border-bottom-color: rgb(252, 204, 59); /* Updated border color for active state */
+  }
+
+  .info-about-clicked {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  .info-about-clicked h2 {
+    color: #cdaa7d;
+    background-color: black;
+    color: rgba(222, 222, 0, 0.625);
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .info-about-clicked p {
+    padding: 0px 30px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    margin-top: -10px;
+  }
+
+  
+
+.options-3 > p {
+  padding-bottom: 5px;
+}
+
+  @keyframes dropDown {
+    0% {
+      transform: translateY(-160px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  } 
+
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+    
+  }
+
+  @keyframes drop-down-header {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    } 100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes appearInstant {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    
+  } 
+
+  .some-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  
+
+  .before-hover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .before-hover p {
+    font-size : 18px;
+  }
+
+  .arrow-up-class {
+    animation: hoverUp 1s infinite;
+  }
+
+  @keyframes pop-up-down {
+    0%{
+      transform: scale(1.2);
+    } 100%  {
+      transform: scale(1);
+    }
+    
+  }
+
+  @keyframes hoverUp  {
+    0% {
+      transform: translateY(20px);
+    } 100% {
+      transform: translateY(0);
+    }
+    
+  }
+
+  @media screen and (max-width : 480px) {
+    body {
+      background-size: 1500px  2200px;
+      overflow-x: hidden;
+    }
+
+    
+    nav {
+      
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .login, .enroll-now {
+      width: 100px;
+      padding: 10px 0px;
+    }
+
+    .right-header {
+      gap: 30px;
+    }
+
+    .top-info {
+      margin-left : 75px;
+    }
+
+    
+    .carousels-div {
+      flex-direction: column;
+      gap: 20px;        
+    }
+
+    .carousel-outer  {
+      width: 450px;
+      background-color: #9b9fa35b;
+    }
+
+    .carousel {
+      width: 3080px;
+    }
+
+    .carousel > div p {
+      width: 430px;
+    }
+
+    .home, .courses, .drop-down {
+      display: none;
+    }
+
+    .clickable-carousel {
+      width: 450px;
+      background-color: #9b9fa35b;
+
+    }
+
+  }
